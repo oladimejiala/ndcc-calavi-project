@@ -37,7 +37,12 @@ export const TrustBadges: React.FC = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: 'url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">

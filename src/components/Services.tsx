@@ -89,7 +89,7 @@ export const Services: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={scrollToContact}
-                    className={`bg-gradient-to-r ${service.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn`}
+                    className={`bg-gradient-to-r ${service.color} text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn text-sm`}
                   >
                     <span>{t('services.enquireNow')}</span>
                     <ArrowRight className="group-hover/btn:translate-x-1 transition-transform" size={16} />
@@ -97,7 +97,7 @@ export const Services: React.FC = () => {
                   
                   <button
                     onClick={scrollToContact}
-                    className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-800 px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-800 px-4 py-2 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
                   >
                     <span>{t('services.learnMore')}</span>
                   </button>
@@ -108,7 +108,13 @@ export const Services: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mt-16 text-center text-white">
+        <div className="relative bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mt-16 text-center text-white overflow-hidden">
+          <div className="absolute inset-0 rounded-2xl opacity-10" style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}></div>
+          <div className="relative z-10">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
             Prêt à faire grandir votre entreprise?
           </h3>
@@ -118,17 +124,18 @@ export const Services: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToContact}
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
             >
               {t('hero.cta2')}
             </button>
             <a
               href="tel:+22997706069"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg transition-colors font-semibold text-lg flex items-center justify-center space-x-2"
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-colors font-semibold flex items-center justify-center space-x-2"
             >
               <Phone size={20} />
               <span>{t('hero.phone')}</span>
             </a>
+          </div>
           </div>
         </div>
       </div>

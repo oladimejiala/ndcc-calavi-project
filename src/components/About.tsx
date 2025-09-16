@@ -50,7 +50,7 @@ export const About: React.FC = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/Screenshot 2025-09-16 174551.jpg"
+                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="NDC Team"
                 className="w-full h-96 object-cover"
               />

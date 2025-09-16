@@ -5,7 +5,7 @@ import { useLanguage } from '../hooks/useLanguage';
 const slides = [
   {
     id: 1,
-    image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
     titleFr: 'Conseil Fiscal Expert',
     titleEn: 'Expert Tax Consulting',
     subtitleFr: 'Optimisez votre fiscalité avec nos experts certifiés',
@@ -13,7 +13,7 @@ const slides = [
   },
   {
     id: 2,
-    image: 'https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
     titleFr: 'Gestion d\'Entreprise',
     titleEn: 'Business Management',
     subtitleFr: 'Développez votre entreprise avec notre accompagnement',
@@ -21,11 +21,27 @@ const slides = [
   },
   {
     id: 3,
-    image: 'https://images.pexels.com/photos/7688344/pexels-photo-7688344.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
     titleFr: 'Formation Professionnelle',
     titleEn: 'Professional Training',
     subtitleFr: 'Renforcez les compétences de vos équipes',
     subtitleEn: 'Strengthen your team\'s skills',
+  },
+  {
+    id: 4,
+    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    titleFr: 'Solutions Juridiques',
+    titleEn: 'Legal Solutions',
+    subtitleFr: 'Sécurisez vos activités avec nos conseils juridiques',
+    subtitleEn: 'Secure your business with our legal expertise',
+  },
+  {
+    id: 5,
+    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    titleFr: 'Comptabilité Professionnelle',
+    titleEn: 'Professional Accounting',
+    subtitleFr: 'Gérez vos finances avec précision et conformité',
+    subtitleEn: 'Manage your finances with precision and compliance',
   },
 ];
 
@@ -86,7 +102,7 @@ export const HeroSlider: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
                     onClick={() => scrollToSection('services')}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 group"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group"
                   >
                     <span>{t('hero.cta1')}</span>
                     <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -94,14 +110,14 @@ export const HeroSlider: React.FC = () => {
                   
                   <button
                     onClick={() => scrollToSection('contact')}
-                    className="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                    className="border-2 border-white hover:bg-white hover:text-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     {t('hero.cta2')}
                   </button>
                   
                   <a
                     href="tel:+22997706069"
-                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <Phone size={20} />
                     <span>{t('hero.phone')}</span>

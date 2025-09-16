@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
             <LanguageToggle />
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm"
             >
               {t('hero.cta1')}
             </button>
@@ -150,7 +150,7 @@ export const Header: React.FC = () => {
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium mt-4"
+                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium mt-4"
               >
                 {t('hero.cta1')}
               </button>
