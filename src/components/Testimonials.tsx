@@ -45,7 +45,7 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <section id="testimonials" className="py-20 bg-gradient-to-br from-emerald-50 to-blue-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -58,7 +58,7 @@ export const Testimonials: React.FC = () => {
 
         <div className="relative max-w-4xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
-            <Quote className="w-16 h-16 text-blue-600 mb-6" />
+            <Quote className="w-16 h-16 text-emerald-600 mb-6" />
             
             <div className="mb-6">
               {[...Array(5)].map((_, i) => (
@@ -87,7 +87,7 @@ export const Testimonials: React.FC = () => {
                 <div className="font-bold text-lg text-gray-800">
                   {testimonials[currentIndex].name}
                 </div>
-                <div className="text-blue-600 font-medium">
+                <div className="text-emerald-600 font-medium">
                   {testimonials[currentIndex].company}
                 </div>
               </div>
@@ -117,7 +117,7 @@ export const Testimonials: React.FC = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
+                index === currentIndex ? 'bg-emerald-600' : 'bg-gray-300'
               }`}
             />
           ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 
 export const Footer: React.FC = () => {
@@ -12,6 +12,12 @@ export const Footer: React.FC = () => {
     }
   };
 
+  const openContactModal = () => {
+    const modal = document.getElementById('contact-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+  };
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -19,7 +25,7 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-12 h-12 bg-gradient-to-r from-emerald-600 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-xl">
                 NDC
               </div>
               <div>
@@ -38,6 +44,30 @@ export const Footer: React.FC = () => {
                 className="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors"
               >
                 <Facebook size={20} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-600 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors"
+              >
+                <Twitter size={20} />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-colors"
+              >
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -99,19 +129,19 @@ export const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-6">{t('footer.contact')}</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-emerald-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">
                   Ilot 38 S « A » Sèmè Abomey - Calavi
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
+                <Phone className="w-5 h-5 text-emerald-400" />
                 <a href="tel:+22997706069" className="text-gray-300 hover:text-white transition-colors">
                   +229 97 70 60 69
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
+                <Mail className="w-5 h-5 text-emerald-400" />
                 <a href="mailto:ndcconseils.contacts@gmail.com" className="text-gray-300 hover:text-white transition-colors text-sm">
                   ndcconseils.contacts@gmail.com
                 </a>

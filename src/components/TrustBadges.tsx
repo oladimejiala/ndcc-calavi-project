@@ -37,9 +37,9 @@ export const TrustBadges: React.FC = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-br from-gray-50 to-emerald-50 relative overflow-hidden">
       <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: 'url(https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop)',
+        backgroundImage: 'url(https://images.pexels.com/photos/3182465/pexels-photo-3182465.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}></div>
@@ -58,8 +58,8 @@ export const TrustBadges: React.FC = () => {
                 key={index}
                 className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-8 h-8 text-emerald-600" />
                 </div>
                 <h3 className="font-bold text-gray-800 mb-2">
                   {language === 'fr' ? badge.titleFr : badge.titleEn}

@@ -2,11 +2,15 @@ import React from 'react';
 import { createLanguageProvider } from './hooks/useLanguage.tsx';
 import { Header } from './components/Header';
 import { HeroSlider } from './components/HeroSlider';
+import { PDGWelcome } from './components/PDGWelcome';
+import { VisionMissionValues } from './components/VisionMissionValues';
 import { Services } from './components/Services';
 import { About } from './components/About';
 import { TrustBadges } from './components/TrustBadges';
+import { Partners } from './components/Partners';
+import { SuccessStories } from './components/SuccessStories';
 import { Testimonials } from './components/Testimonials';
-import { ContactForm } from './components/ContactForm';
+import { ContactModal } from './components/ContactModal';
 import { Footer } from './components/Footer';
 
 const { LanguageProvider } = createLanguageProvider();
@@ -17,11 +21,15 @@ function App() {
       <div className="min-h-screen">
         <Header />
         <HeroSlider />
+        <PDGWelcome />
+        <VisionMissionValues />
         <Services />
         <About />
         <TrustBadges />
+        <Partners />
+        <SuccessStories />
         <Testimonials />
-        <ContactForm />
+        <ContactModal />
         <Footer />
       </div>
     </LanguageProvider>

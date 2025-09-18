@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { LanguageToggle } from './LanguageToggle';
 import { useLanguage } from '../hooks/useLanguage';
 
@@ -24,6 +24,13 @@ export const Header: React.FC = () => {
     setIsOpen(false);
   };
 
+  const openContactModal = () => {
+    const modal = document.getElementById('contact-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+    }
+    setIsOpen(false);
+  };
   return (
     <>
       {/* Top Bar */}
@@ -39,8 +46,22 @@ export const Header: React.FC = () => {
               <span>ndcconseils.contacts@gmail.com</span>
             </a>
           </div>
-          <div className="hidden md:block">
-            <span>Ilot 38 S « A » Sèmè Abomey - Calavi</span>
+          <div className="flex items-center space-x-3">
+            <span className="hidden md:block">Ilot 38 S « A » Sèmè Abomey - Calavi</span>
+            <div className="flex space-x-2">
+              <a href="https://www.facebook.com/profile.php?id=100054363888577" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200">
+                <Facebook size={16} />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200">
+                <Instagram size={16} />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200">
+                <Twitter size={16} />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-200">
+                <Linkedin size={16} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -52,7 +73,7 @@ export const Header: React.FC = () => {
         <nav className="container mx-auto px-4 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            <div className="w-12 h-12 bg-gradient-to-r from-emerald-600 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-xl">
               NDC
             </div>
             <div>
@@ -65,38 +86,38 @@ export const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
             >
               {t('nav.home')}
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
             >
               {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
             >
               {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
             >
               {t('nav.testimonials')}
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              onClick={openContactModal}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
             >
               {t('nav.contact')}
             </button>
             <LanguageToggle />
             <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm"
+              onClick={openContactModal}
+              className="bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-emerald-700 hover:to-blue-700 transition-colors font-medium text-sm"
             >
               {t('hero.cta1')}
             </button>
@@ -120,37 +141,37 @@ export const Header: React.FC = () => {
             <div className="px-4 py-6 space-y-4">
               <button
                 onClick={() => scrollToSection('home')}
-                className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-emerald-600 font-medium py-2"
               >
                 {t('nav.home')}
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-emerald-600 font-medium py-2"
               >
                 {t('nav.services')}
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-emerald-600 font-medium py-2"
               >
                 {t('nav.about')}
               </button>
               <button
                 onClick={() => scrollToSection('testimonials')}
-                className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                className="block w-full text-left text-gray-700 hover:text-emerald-600 font-medium py-2"
               >
                 {t('nav.testimonials')}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
-                className="block w-full text-left text-gray-700 hover:text-blue-600 font-medium py-2"
+                onClick={openContactModal}
+                className="block w-full text-left text-gray-700 hover:text-emerald-600 font-medium py-2"
               >
                 {t('nav.contact')}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium mt-4"
+                onClick={openContactModal}
+                className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-emerald-700 hover:to-blue-700 transition-colors font-medium mt-4"
               >
                 {t('hero.cta1')}
               </button>

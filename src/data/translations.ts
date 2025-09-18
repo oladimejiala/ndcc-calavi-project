@@ -58,6 +58,40 @@ export const translations = {
       projects: 'Projets Réalisés',
       team: 'Experts',
     },
+    // PDG Welcome
+    pdg: {
+      title: 'Message du PDG',
+      subtitle: 'Un mot de notre Président Directeur Général',
+      name: 'Dr. Jean-Baptiste AKPOVI',
+      position: 'Président Directeur Général',
+      message: 'Chers clients et partenaires, depuis plus de 10 ans, New Deal Consulting Conseils s\'engage à être votre partenaire de confiance dans la croissance et le développement de votre entreprise. Notre expertise reconnue et notre approche personnalisée nous permettent d\'offrir des solutions innovantes adaptées aux défis du marché africain. Ensemble, construisons l\'avenir de votre entreprise.',
+    },
+    // Vision Mission Values
+    vmv: {
+      title: 'Notre Vision, Mission & Valeurs',
+      vision: {
+        title: 'Notre Vision',
+        description: 'Être le cabinet de conseil de référence en Afrique de l\'Ouest, reconnu pour son excellence et son innovation dans l\'accompagnement des entreprises.',
+      },
+      mission: {
+        title: 'Notre Mission',
+        description: 'Accompagner les entreprises dans leur croissance en offrant des services de conseil de haute qualité, adaptés aux réalités du marché africain.',
+      },
+      values: {
+        title: 'Nos Valeurs',
+        description: 'Excellence, Intégrité, Innovation, Proximité client et Engagement pour le développement durable de l\'Afrique.',
+      },
+    },
+    // Success Stories
+    successStories: {
+      title: 'Nos Réussites',
+      subtitle: 'Projets réalisés avec succès',
+    },
+    // Partners
+    partners: {
+      title: 'Nos Partenaires',
+      subtitle: 'Ils nous font confiance',
+    },
     // Testimonials
     testimonials: {
       title: 'Témoignages Clients',
@@ -67,6 +101,7 @@ export const translations = {
     contact: {
       title: 'Contactez-Nous',
       subtitle: 'Prêt à faire passer votre entreprise au niveau supérieur?',
+      openModal: 'Ouvrir le formulaire',
       form: {
         name: 'Nom Complet',
         email: 'Adresse Email',
@@ -77,6 +112,7 @@ export const translations = {
         sending: 'Envoi...',
         success: 'Message envoyé avec succès!',
         error: 'Erreur lors de l\'envoi. Veuillez réessayer.',
+        close: 'Fermer',
       },
       info: {
         address: 'Adresse',
@@ -84,6 +120,7 @@ export const translations = {
         email: 'Email',
         hours: 'Heures d\'Ouverture',
         hoursText: 'Lun - Ven: 8h00 - 18h00',
+        location: 'Notre Localisation',
       },
     },
     // Footer
@@ -162,6 +199,40 @@ export const translations = {
       projects: 'Completed Projects',
       team: 'Experts',
     },
+    // PDG Welcome
+    pdg: {
+      title: 'CEO Message',
+      subtitle: 'A word from our Chief Executive Officer',
+      name: 'Dr. Jean-Baptiste AKPOVI',
+      position: 'Chief Executive Officer',
+      message: 'Dear clients and partners, for over 10 years, New Deal Consulting Conseils has been committed to being your trusted partner in the growth and development of your business. Our recognized expertise and personalized approach allow us to offer innovative solutions adapted to the challenges of the African market. Together, let\'s build the future of your business.',
+    },
+    // Vision Mission Values
+    vmv: {
+      title: 'Our Vision, Mission & Values',
+      vision: {
+        title: 'Our Vision',
+        description: 'To be the leading consulting firm in West Africa, recognized for excellence and innovation in business support.',
+      },
+      mission: {
+        title: 'Our Mission',
+        description: 'To support businesses in their growth by offering high-quality consulting services adapted to African market realities.',
+      },
+      values: {
+        title: 'Our Values',
+        description: 'Excellence, Integrity, Innovation, Client proximity and Commitment to sustainable development in Africa.',
+      },
+    },
+    // Success Stories
+    successStories: {
+      title: 'Our Success Stories',
+      subtitle: 'Successfully completed projects',
+    },
+    // Partners
+    partners: {
+      title: 'Our Partners',
+      subtitle: 'They trust us',
+    },
     // Testimonials
     testimonials: {
       title: 'Client Testimonials',
@@ -171,6 +242,7 @@ export const translations = {
     contact: {
       title: 'Contact Us',
       subtitle: 'Ready to take your business to the next level?',
+      openModal: 'Open contact form',
       form: {
         name: 'Full Name',
         email: 'Email Address',
@@ -181,6 +253,7 @@ export const translations = {
         sending: 'Sending...',
         success: 'Message sent successfully!',
         error: 'Error sending message. Please try again.',
+        close: 'Close',
       },
       info: {
         address: 'Address',
@@ -188,6 +261,7 @@ export const translations = {
         email: 'Email',
         hours: 'Business Hours',
         hoursText: 'Mon - Fri: 8:00 AM - 6:00 PM',
+        location: 'Our Location',
       },
     },
     // Footer
