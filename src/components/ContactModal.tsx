@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Send, X, MapPin, Phone, Mail, Clock } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
 
 export const ContactModal: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +11,6 @@ export const ContactModal: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const { t } = useLanguage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -27,9 +25,9 @@ export const ContactModal: React.FC = () => {
 
     try {
       const mailtoLink = `mailto:ndcconseils.contacts@gmail.com?subject=Demande de renseignements - ${formData.service}&body=Nom: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATéléphone: ${formData.phone}%0D%0AService: ${formData.service}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-      
+
       window.location.href = mailtoLink;
-      
+
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -60,10 +58,10 @@ export const ContactModal: React.FC = () => {
           <div className="flex justify-between items-center mb-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
-                {t('contact.title')}
+                Contactez-nous
               </h2>
               <p className="text-xl text-gray-600 mt-2">
-                {t('contact.subtitle')}
+                Nous sommes là pour vous accompagner
               </p>
             </div>
             <button
@@ -78,12 +76,12 @@ export const ContactModal: React.FC = () => {
             {/* Contact Info */}
             <div>
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Nos Informations</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MapPin className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">{t('contact.info.address')}</h4>
+                    <h4 className="font-semibold text-lg mb-1">Adresse</h4>
                     <p className="text-gray-600">Ilot 38 S « A » Sèmè Abomey - Calavi</p>
                   </div>
                 </div>
@@ -91,7 +89,7 @@ export const ContactModal: React.FC = () => {
                 <div className="flex items-start space-x-4">
                   <Phone className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">{t('contact.info.phone')}</h4>
+                    <h4 className="font-semibold text-lg mb-1">Téléphone</h4>
                     <p className="text-gray-600">+229 97 70 60 69</p>
                     <p className="text-gray-600">+229 95 80 71 78</p>
                   </div>
@@ -100,7 +98,7 @@ export const ContactModal: React.FC = () => {
                 <div className="flex items-start space-x-4">
                   <Mail className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">{t('contact.info.email')}</h4>
+                    <h4 className="font-semibold text-lg mb-1">Email</h4>
                     <p className="text-gray-600">ndcconseils.contacts@gmail.com</p>
                   </div>
                 </div>
@@ -108,8 +106,8 @@ export const ContactModal: React.FC = () => {
                 <div className="flex items-start space-x-4">
                   <Clock className="w-6 h-6 text-emerald-600 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">{t('contact.info.hours')}</h4>
-                    <p className="text-gray-600">{t('contact.info.hoursText')}</p>
+                    <h4 className="font-semibold text-lg mb-1">Horaires</h4>
+                    <p className="text-gray-600">Lun - Ven: 8h00 - 17h00</p>
                     <p className="text-gray-600">Sam: 8h00 - 12h00</p>
                   </div>
                 </div>
@@ -117,7 +115,7 @@ export const ContactModal: React.FC = () => {
 
               {/* Google Map */}
               <div className="mt-8">
-                <h4 className="font-semibold text-lg mb-4">{t('contact.info.location')}</h4>
+                <h4 className="font-semibold text-lg mb-4">Localisation</h4>
                 <div className="rounded-lg overflow-hidden shadow-lg">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8234567890123!2d2.3534819378023313!3d6.458864929844872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnMzEuOSJOIDLCsDIxJzEyLjUiRQ!5e0!3m2!1sfr!2sbj!4v1234567890123"
@@ -137,7 +135,7 @@ export const ContactModal: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('contact.form.name')} *
+                    Nom complet *
                   </label>
                   <input
                     type="text"
@@ -152,7 +150,7 @@ export const ContactModal: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact.form.email')} *
+                      Email *
                     </label>
                     <input
                       type="email"
@@ -166,7 +164,7 @@ export const ContactModal: React.FC = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {t('contact.form.phone')}
+                      Téléphone
                     </label>
                     <input
                       type="tel"
@@ -180,7 +178,7 @@ export const ContactModal: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('contact.form.service')}
+                    Service souhaité
                   </label>
                   <select
                     name="service"
@@ -200,7 +198,7 @@ export const ContactModal: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('contact.form.message')} *
+                    Message *
                   </label>
                   <textarea
                     name="message"
@@ -220,28 +218,28 @@ export const ContactModal: React.FC = () => {
                   >
                     <Send size={20} />
                     <span>
-                      {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
+                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                     </span>
                   </button>
-                  
+
                   <button
                     type="button"
                     onClick={closeModal}
                     className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-800 py-3 px-6 rounded-lg transition-colors font-semibold"
                   >
-                    {t('contact.form.close')}
+                    Fermer
                   </button>
                 </div>
 
                 {submitStatus === 'success' && (
                   <div className="text-green-600 text-center font-medium">
-                    {t('contact.form.success')}
+                    Message envoyé avec succès !
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className="text-red-600 text-center font-medium">
-                    {t('contact.form.error')}
+                    Erreur lors de l'envoi. Veuillez réessayer.
                   </div>
                 )}
               </form>
@@ -249,6 +247,6 @@ export const ContactModal: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
